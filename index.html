@@ -75,8 +75,10 @@
         <p class="kyrat-story__body-copy">I turn and I run.</p>
         <p class="kyrat-story__body-copy">The road sweeps down and winds back and forth on itself to create three nearly parallel segments. Rather than follow it, I run perpendicular to the roadways and cut through the brown grass between them. I jump down from the high road and land hard close to the middle one. Deja vu sets in. It takes a moment to pick myself off the ground but I start running again as soon as I can. I quickly regret jumping instead of sliding down the incline; I'm certain I gave the bear a chance to close some distance. I fumble through my arsenal as I cut across the middle road and down through the grass on the other side.</p>
         <p class="kyrat-story__body-copy">And then I remember something vital.</p>
+        <img class="kyrat-story__img-sequence kyrat-story__helicopter" src="img/helicopter/helicopter-0000.png">
         <p class="kyrat-story__body-copy">I took down a helicopter with an explosive tipped arrow somewhere between being chased by bears today. I still have eight of those arrows.</p>
         <p class="kyrat-story__body-copy">Just as I cross the last road, I spin around&mdash;my back facing another decline. I took my first good look at this bear, recognizing that only one of us is walking away from this encounter.  I draw the bow back as he closes in and then release the only arrow I'll have time to shoot.</p>
+        <img class="kyrat-story__img-sequence kyrat-story__bearsplosion" src="img/bearsplosion/bearsplosion-0000.png">
         <p class="kyrat-story__body-copy">Surprise, the explosion doesn't send the bear backwards. It deflects him. He leaves the ground and flies off the cliff five to ten feet to my left. I watch the whole thing, laughing uncontrollably like the monster I am&mdash;briefly pondering how I would explain the situation to my neighbors. The bear lands and slides to a rest near a yak who bolts almost immediately. Yeah buddy, I would, too. I make my way down to the carcass. I skin the beast&mdash;not because I need to but because I want to.</p>
         <p class="kyrat-story__body-copy">You have not killed me today, Kyrat. I have taken the bear you sent for me, believing in my heart it is the one from before.</p>
         <p class="kyrat-story__body-copy">I leave the animal and look up behind me. I can still see the bell tower. Excuse me, I have a propaganda radio station to stop.</p>
@@ -155,19 +157,27 @@
           }
         }
 
-        var bear1 = imgSequence(222, '.kyrat-story__bear1');
+        var bear1     = imgSequence(222, '.kyrat-story__bear1');
         var playBear1 = playWhenVisible('.kyrat-story__bear1', bear1, 40);
 
-        var jump  = imgSequence(128, '.kyrat-story__jump');
-        var playJump  = playWhenVisible('.kyrat-story__jump', jump, 40);
+        var jump      = imgSequence(128, '.kyrat-story__jump');
+        var playJump  = playWhenVisible('.kyrat-story__jump', jump, 45);
 
-        var bear2 = imgSequence(114, '.kyrat-story__bear2');
+        var bear2     = imgSequence(114, '.kyrat-story__bear2');
         var playBear2 = playWhenVisible('.kyrat-story__bear2', bear2, 40);
+
+        var helicopter     = imgSequence(299, '.kyrat-story__helicopter');
+        var playHelicopter = playWhenVisible('.kyrat-story__helicopter', helicopter, 40);
+
+        var bearsplosion     = imgSequence(437, '.kyrat-story__bearsplosion');
+        var playBearsplosion = playWhenVisible('.kyrat-story__bearsplosion', bearsplosion, 40);
 
         window.onscroll = function() {
           playBear1();
           playJump();
           playBear2();
+          playHelicopter();
+          playBearsplosion();
         }
 
       })();
