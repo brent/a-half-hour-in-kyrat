@@ -84,9 +84,9 @@
 
     <script type="text/javascript">
       (function() {
+        'use strict';
 
         function imgSequence(totalFrames, el) {
-          'use strict';
 
           var framesLeft = totalFrames;
           var bearImg = document.querySelector(el);
@@ -111,14 +111,12 @@
               //var arrMatches = regex.exec(imgSrc);
               //var newSrc = arrMatches[1] + padNum(Number(arrMatches[2]) + 1, 4) + arrMatches[3];
 
-              console.log(newSrc);
               bearImg.setAttribute('src', newSrc);
               framesLeft--;
             }
-            else {
-              clearInterval(this);
-              //clearInterval(arrMatches[2]);
-            }
+            //else {
+            //  clearInterval(this);
+            //}
           }
         }
 
@@ -144,20 +142,21 @@
           );
         }
 
+        // maybe this needs to become part of a function
+        // with a closure? otherwise, these values will get
+        // overridden once there are multiple sequences to
+        // be played
+        // there neds to be an isPlaying for each sequence
+        // and ideally a timer per
+        var isPlaying = false;
+        var timer;
+
         function playWhenVisible(el, imgSeq, interval) {
-          var isPlaying = false;
-
-          function play() {
+          if(elementInViewport(document.querySelector(el)) && (isPlaying !== true)) {
+            timer = setInterval(imgSeq, interval);
             isPlaying = true;
-            if(elementInViewport(document.querySelector(el))) {
-              setInterval(imgSeq, interval);
-            }
           }
-
-          if(isPlaying===false) {
-            play();
-          } else { }
-        };
+        }
 
         var bear1 = imgSequence(222, '.kyrat-story__bear1');
         var bear2 = imgSequence(114, '.kyrat-story__bear2');
