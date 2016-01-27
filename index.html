@@ -45,6 +45,7 @@
       .kyrat-story__img-sequence {
         display: block;
         max-width: 1280px;
+        width: 100%;
         margin: 0 auto 60px;
       }
     </style>
@@ -62,8 +63,9 @@
         <img class="kyrat-story__img-sequence kyrat-story__bear1" src="img/bear1/bear1-0000.png">
         <p class="kyrat-story__body-copy kyrat-story__oh-fuck">OH, FUCK.</p>
         <p class="kyrat-story__body-copy">If you've seen The Revenant then I trust you have an appropriately heightened fear of bears and a strong desire to avoid all incoming bear attacks. Instead of spending the next hour as a crippled mess without Tom Hardy (or an Oscar) to chase, I did the only thing that makes sense in Kyrat. I ran the other way and jumped off the cliff.</p>
+        <img class="kyrat-story__img-sequence kyrat-story__jump" src="img/jump/jump-0223.png">
         <p class="kyrat-story__body-copy">I hear the bear one more time just before engaging my wingsuit. As I glide towards a clearing lower in the forest I pull my parachute and land safely on the green below. The smuggler I was after escaped during my brush with nature. I've failed the mission, but survive to fight another day in Kyrat's wilds.</p>
-        <p class="kyrat-story__body-copy">Twenty minutes later, I stand atop another cliffside—silently observing the rickety bell tower reaching into the sky before me. I trekked across the wilderness to get here after stashing my second try blood diamonds at a drop point and saving an unrelated hostage from a guard&hellip; only to have a snow leopard kill the the man before I could slay the beast and save him a second time. I tried. Shit happens and Kyrat is a dangerous place.</p>
+        <p class="kyrat-story__body-copy">Twenty minutes later, I stand atop another cliffside&mdash;silently observing the rickety bell tower reaching into the sky before me. I trekked across the wilderness to get here after stashing my second try blood diamonds at a drop point and saving an unrelated hostage from a guard&hellip; only to have a snow leopard kill the the man before I could slay the beast and save him a second time. I tried. Shit happens and Kyrat is a dangerous place.</p>
         <p class="kyrat-story__body-copy">The tower and its surrounding area look clear, so I began my approach. Before making it halfway, I'm alerted that a Lieutenant of Pagan Min's is nearby. Eliminating him would be good for the rebellion, so I shift my attention. I creep through the foliage and around a tree to survey the scene; he's with three other men. I make short work of the lot with a silenced rifle and move in to loot the bodies and retrieve the officer's orders. As I'm pillaging the dead, I hear a scream, a second person's scream, gunfire, and then a familiar roar.</p>
         <p class="kyrat-story__body-copy">Like the well armed madman I am, I run towards the commotion. Just as I'm approaching the road I hear another roar&mdash;impossibly close. I swivel my head and notice the bear I just ran past returning to all fours.</p>
 
@@ -90,7 +92,7 @@
 
           var framesLeft = totalFrames;
           var bearImg = document.querySelector(el);
-          var regex = /(.*)(\d{4})(\..*)/;
+          //var regex = /(.*)(\d{4})(\..*)/;
           var regex2 = /(.*\/)(.*)(-)(\d{4})(\..*)/;
 
           function padNum(num, size) {
@@ -114,9 +116,6 @@
               bearImg.setAttribute('src', newSrc);
               framesLeft--;
             }
-            //else {
-            //  clearInterval(this);
-            //}
           }
         }
 
@@ -142,42 +141,34 @@
           );
         }
 
-        // maybe this needs to become part of a function
-        // with a closure? otherwise, these values will get
-        // overridden once there are multiple sequences to
-        // be played
-        // there neds to be an isPlaying for each sequence
-        // and ideally a timer per
-        var isPlaying = false;
-        var timer;
-
         function playWhenVisible(el, imgSeq, interval) {
-          if(elementInViewport(document.querySelector(el)) && (isPlaying !== true)) {
-            timer = setInterval(imgSeq, interval);
-            isPlaying = true;
+          var isPlaying = false;
+          var timer;
+
+          return function playSequence() {
+            if(elementInViewport(document.querySelector(el)) && (isPlaying !== true)) {
+              timer = setInterval(imgSeq, interval);
+              isPlaying = true;
+            } else {
+              clearInterval(this);
+            }
           }
         }
 
         var bear1 = imgSequence(222, '.kyrat-story__bear1');
-        var bear2 = imgSequence(114, '.kyrat-story__bear2');
+        var playBear1 = playWhenVisible('.kyrat-story__bear1', bear1, 40);
 
-        //window.onscroll = playWhenVisible('.kyrat-story__bear1', setInterval(bear1, 40));
-        //window.onscroll = playWhenVisible('.kyrat-story__bear2', setInterval(bear2, 40));
+        var jump  = imgSequence(128, '.kyrat-story__jump');
+        var playJump  = playWhenVisible('.kyrat-story__jump', jump, 40);
+
+        var bear2 = imgSequence(114, '.kyrat-story__bear2');
+        var playBear2 = playWhenVisible('.kyrat-story__bear2', bear2, 40);
 
         window.onscroll = function() {
-          playWhenVisible('.kyrat-story__bear1', bear1, 40);
-          // playWhenVisible('.kyrat-story__bear2', bear2, 40);
+          playBear1();
+          playJump();
+          playBear2();
         }
-
-        // window.onscroll = function() {
-        //   if(elementInViewport(document.querySelector('.kyrat-story__bear2'))) {
-        //     console.log(elementInViewport(document.querySelector('.kyrat-story__bear2')))
-        //     setInterval(bear2, 40);
-        //   }
-        // };
-
-        //setInterval(bear1, 40);
-        //setInterval(bear2, 40);
 
       })();
     </script>
