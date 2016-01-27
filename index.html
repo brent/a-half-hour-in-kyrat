@@ -4,7 +4,6 @@
   <head>
     <title></title>
     <link href="css/reset.css" type="text/css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <style>
       .kyrat-story {
@@ -12,22 +11,32 @@
       }
 
       .kyrat-story__hero {
-        align-items: center;
-        background: url('img/kyrat-hero.png') no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        min-height: 543px;
-        margin-bottom: 60px;
+        /* align-items: center; */
+        /* background: url('img/kyrat-hero.png') no-repeat; */
+        /* background-size: cover; */
+        /* display: flex; */
+        /* flex-flow: row wrap; */
+        /* justify-content: space-between; */
+        padding: 60px 0;
       }
 
-      .kyrat-story__title {
+      .kyrat-story__hero-title {
         color: #fff;
         flex: 0 0 auto;
         font-family: sans-serif;
+        font-weight: bold;
         font-size: 100px;
         margin: 0 auto;
+        text-align: center;
+      }
+
+      .kyrat-story__hero .kyrat-story__body-copy {
+        color: #777;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        margin-top: 20px;
+        text-align: center;
       }
 
       .kyrat-story__main {
@@ -37,9 +46,13 @@
       }
 
       .kyrat-story__body-copy {
-        margin: 0 auto 60px;
+        margin: 0 auto;
+        padding-bottom: 60px;
         text-indent: 2em;
         width: 700px;
+      }
+
+      .kyrat-story__img-sequence-container {
       }
 
       .kyrat-story__img-sequence {
@@ -53,36 +66,58 @@
   <body>
 
     <section class="kyrat-story">
+
       <div class="kyrat-story__hero">
-        <h2 class="kyrat-story__title">A Day in Kyrat</h2>
+        <h2 class="kyrat-story__hero-title">A Half Hour<br> in Kyrat</h2>
+        <p class="kyrat-story__body-copy">A brief story inspired by <a href="#">Far Cry 4</a></p>
       </div>
 
       <div class="kyrat-story__main">
-        <p class="kyrat-story__body-copy">I've been tearing through the countryside on an ATV for a couple of minutes&mdash;racing to the vantage point a crazy, fanatical African weapons dealer directed me to. Why? Blood diamonds. Or something like that. He quotes the bible every time I visit him, justifying violence with passages that God probably didn't mean that way. I'll be honest, a lot of what he says is lost on me. He's taken my lack of protest as confirmation, though, and has given me a task. He's using me, just like every other "friend" I've made since arriving in Kyrat. Fortunately, I'm happy to be used if it means thinning the ranks of Pagan Min's&mdash;the local tyrant's&mdash;endless army.</p>
+
+        <p class="kyrat-story__body-copy">I've been tearing through the countryside on an ATV for a couple of minutes&mdash;racing to the vantage point a crazy, fanatical African weapons dealer directed me to. Why? Blood diamonds. Or something like that. He quotes the bible every time I visit him, justifying violence with passages that God probably didn't mean that way. I'll be honest, a lot of what he says is lost on me. He took my lack of protest as confirmation, though, and gave me this task. He's using me, just like every other "friend" I've made since arriving in Kyrat. Fortunately, I'm happy to be used if it means thinning the ranks of Pagan Min's&mdash;the local tyrant's&mdash;endless army.</p>
         <p class="kyrat-story__body-copy">Just as I arrive at the vantage point, I hear a roar. My body tenses up. I look to my right and for a moment I miss the bear staring down at me from the grassy rise. I double take and spot it. Then it charges.</p>
-        <img class="kyrat-story__img-sequence kyrat-story__bear1" src="img/bear1/bear1-0000.png">
-        <p class="kyrat-story__body-copy kyrat-story__oh-fuck">OH, FUCK.</p>
+
+        <div class="kyrat-story__img-sequence-container">
+          <img class="kyrat-story__img-sequence kyrat-story__bear1" src="img/bear1/bear1-0000.png">
+          <p class="kyrat-story__body-copy kyrat-story__big-text kyrat-story__oh-fuck">OH. FUCK.</p>
+        </div>
+
         <p class="kyrat-story__body-copy">If you've seen The Revenant then I trust you have an appropriately heightened fear of bears and a strong desire to avoid all incoming bear attacks. Instead of spending the next hour as a crippled mess without Tom Hardy (or an Oscar) to chase, I did the only thing that makes sense in Kyrat. I ran the other way and jumped off the cliff.</p>
+
         <img class="kyrat-story__img-sequence kyrat-story__jump" src="img/jump/jump-0223.png">
-        <p class="kyrat-story__body-copy">I hear the bear one more time just before engaging my wingsuit. As I glide towards a clearing lower in the forest I pull my parachute and land safely on the green below. The smuggler I was after escaped during my brush with nature. I've failed the mission, but survive to fight another day in Kyrat's wilds.</p>
-        <p class="kyrat-story__body-copy">Twenty minutes later, I stand atop another cliffside&mdash;silently observing the rickety bell tower reaching into the sky before me. I trekked across the wilderness to get here after stashing my second try blood diamonds at a drop point and saving an unrelated hostage from a guard&hellip; only to have a snow leopard kill the the man before I could slay the beast and save him a second time. I tried. Shit happens and Kyrat is a dangerous place.</p>
-        <p class="kyrat-story__body-copy">The tower and its surrounding area look clear, so I began my approach. Before making it halfway, I'm alerted that a Lieutenant of Pagan Min's is nearby. Eliminating him would be good for the rebellion, so I shift my attention. I creep through the foliage and around a tree to survey the scene; he's with three other men. I make short work of the lot with a silenced rifle and move in to loot the bodies and retrieve the officer's orders. As I'm pillaging the dead, I hear a scream, a second person's scream, gunfire, and then a familiar roar.</p>
+
+        <p class="kyrat-story__body-copy">I hear the bear one more time just before engaging my wingsuit. As I glide towards a clearing lower in the forest I pull my parachute and land safely on the grass below. The smuggler I was after escaped during my brush with nature. I've failed the mission, but survive to fight another day in Kyrat's wilds.</p>
+        <p class="kyrat-story__body-copy">Twenty minutes later, I'm on another cliffside&mdash;silently observing the rickety bell tower reaching into the sky before me. I trekked across the wilderness to get here after dropping off my second try blood diamonds and saving an unrelated hostage from a guard&hellip; only to have a snow leopard kill the the man before I could slay the beast and save him a second time. I tried. Shit happens and Kyrat is a dangerous place.</p>
+        <p class="kyrat-story__body-copy">The tower and its surrounding area look clear so I begin my approach. Before making it halfway, I'm alerted that a Lieutenant of Pagan Min's is nearby. Eliminating him would be good for the rebellion, so I shift my attention. I creep through the foliage and around a tree to survey the scene; he's with three other men. I make short work of the lot with a silenced rifle and move in to loot the bodies and retrieve the officer's orders. As I'm pillaging the dead, I hear a scream, a second person's scream, gunfire, and then a familiar roar.</p>
         <p class="kyrat-story__body-copy">Like the well armed madman I am, I run towards the commotion. Just as I'm approaching the road I hear another roar&mdash;impossibly close. I swivel my head and notice the bear I just ran past returning to all fours.</p>
 
         <img class="kyrat-story__img-sequence kyrat-story__bear2" src="img/bear2/bear2-0000.png">
 
-        <p class="kyrat-story__body-copy kyrat-story__no-not-again">No, not again.</p>
+        <p class="kyrat-story__body-copy kyrat-story__big-text kyrat-story__no-not-again">No, not again.</p>
         <p class="kyrat-story__body-copy">I turn and I run.</p>
-        <p class="kyrat-story__body-copy">The road sweeps down and winds back and forth on itself to create three nearly parallel segments. Rather than follow it, I run perpendicular to the roadways and cut through the brown grass between them. I jump down from the high road and land hard close to the middle one. Deja vu sets in. It takes a moment to pick myself off the ground but I start running again as soon as I can. I quickly regret jumping instead of sliding down the incline; I'm certain I gave the bear a chance to close some distance. I fumble through my arsenal as I cut across the middle road and down through the grass on the other side.</p>
-        <p class="kyrat-story__body-copy">And then I remember something vital.</p>
+        <p class="kyrat-story__body-copy">The road sweeps down and winds back and forth on itself to create three nearly parallel segments. Rather than follow it, I run perpendicular to the roadways and cut through the brown grass between them. I jump down from the high road and land hard close to the middle one.</p>
+
+        <img class="kyrat-story__img-sequence kyrat-story__running" src="img/running/bearsplosion-0000.png">
+        <p class="kyrat-story__body-copy">Deja vu sets in.</p>
+
+        <p class="kyrat-story__body-copy">It takes a moment to pick myself off the ground but I start running again as soon as I can. I quickly regret jumping instead of sliding down the incline; I'm certain I gave the bear a chance to close some distance. I fumble through my arsenal as I cut across the middle road and down through the grass on the other side.</p>
+
+        <p class="kyrat-story__body-copy kyrat-story__big-text kyrat-story__remember">And then I remember something vital.</p>
+
         <img class="kyrat-story__img-sequence kyrat-story__helicopter" src="img/helicopter/helicopter-0000.png">
+
         <p class="kyrat-story__body-copy">I took down a helicopter with an explosive tipped arrow somewhere between being chased by bears today. I still have eight of those arrows.</p>
-        <p class="kyrat-story__body-copy">Just as I cross the last road, I spin around&mdash;my back facing another decline. I took my first good look at this bear, recognizing that only one of us is walking away from this encounter.  I draw the bow back as he closes in and then release the only arrow I'll have time to shoot.</p>
-        <img class="kyrat-story__img-sequence kyrat-story__bearsplosion" src="img/bearsplosion/bearsplosion-0000.png">
-        <p class="kyrat-story__body-copy">Surprise, the explosion doesn't send the bear backwards. It deflects him. He leaves the ground and flies off the cliff five to ten feet to my left. I watch the whole thing, laughing uncontrollably like the monster I am&mdash;briefly pondering how I would explain the situation to my neighbors. The bear lands and slides to a rest near a yak who bolts almost immediately. Yeah buddy, I would, too. I make my way down to the carcass. I skin the beast&mdash;not because I need to but because I want to.</p>
-        <p class="kyrat-story__body-copy">You have not killed me today, Kyrat. I have taken the bear you sent for me, believing in my heart it is the one from before.</p>
+        <p class="kyrat-story__body-copy">Just as I cross the last road, I spin around&mdash;my back facing another decline. I get my first good look at this bear and recognize that only one of us is walking away from this encounter.  I draw the bow back as he closes in and release the only arrow I'll have time to shoot.</p>
+
+        <img class="kyrat-story__img-sequence kyrat-story__bearsplosion" src="img/bearsplosion/bearsplosion-0287.png">
+        <p class="kyrat-story__body-copy kyrat-story__big-text kyrat-story__surprise">Surprise!</p>
+
+        <p class="kyrat-story__body-copy">The explosion doesn't send the bear backwards. It deflects him. He leaves the ground and flies off the cliff to my left. I watch the whole thing, laughing uncontrollably like the monster I am. How I would explain the situation to my neighbors? The bear lands and slides to a rest near a yak who bolts immediately. Yeah buddy, I would too. I make my way to the carcass and skin the beast&mdash;not because I need to but because I want to.</p>
+        <p class="kyrat-story__body-copy">You have not killed me today, Kyrat. I have taken the bear you sent for me, knowing in my heart it is the one from earlier.</p>
         <p class="kyrat-story__body-copy">I leave the animal and look up behind me. I can still see the bell tower. Excuse me, I have a propaganda radio station to stop.</p>
-      </div>
+
+      </div><!-- END .kyrat-main -->
+
     </section><!-- END .kyrat-story -->
 
 
@@ -90,12 +125,10 @@
       (function() {
         'use strict';
 
-        function imgSequence(totalFrames, el) {
-
-          var framesLeft = totalFrames;
-          var bearImg = document.querySelector(el);
-          //var regex = /(.*)(\d{4})(\..*)/;
-          var regex2 = /(.*\/)(.*)(-)(\d{4})(\..*)/;
+        function imgSequence(numImgs, el) {
+          var imgsLeft = numImgs - 1; // first one is already laoded
+          var img = document.querySelector(el);
+          var regex2 = /(.*\/)(.*)-(\d{4})(\..*)/;
 
           function padNum(num, size) {
             // from http://stackoverflow.com/a/2998822
@@ -108,15 +141,13 @@
           }
 
           return function nextFrameInSequence() {
-            if(framesLeft > 0) {
-              var imgSrc = bearImg.getAttribute('src');
+            if(imgsLeft > 0) {
+              var imgSrc = img.getAttribute('src');
               var arrMatches = regex2.exec(imgSrc);
-              var newSrc = arrMatches[1] + arrMatches[2] + arrMatches[3] + padNum(Number(arrMatches[4]) + 1, 4) + arrMatches[5];
-              //var arrMatches = regex.exec(imgSrc);
-              //var newSrc = arrMatches[1] + padNum(Number(arrMatches[2]) + 1, 4) + arrMatches[3];
+              var newSrc = arrMatches[1] + arrMatches[2] + '-' + padNum(Number(arrMatches[3]) + 1, 4) + arrMatches[4];
 
-              bearImg.setAttribute('src', newSrc);
-              framesLeft--;
+              img.setAttribute('src', newSrc);
+              imgsLeft--;
             }
           }
         }
@@ -148,7 +179,7 @@
           var timer;
 
           return function playSequence() {
-            if(elementInViewport(document.querySelector(el)) && (isPlaying !== true)) {
+            if(elementInViewport(document.querySelector(el)) && !isPlaying) {
               timer = setInterval(imgSeq, interval);
               isPlaying = true;
             } else {
@@ -157,27 +188,33 @@
           }
         }
 
-        var bear1     = imgSequence(222, '.kyrat-story__bear1');
-        var playBear1 = playWhenVisible('.kyrat-story__bear1', bear1, 40);
+        var bear1Sequence = imgSequence(223, '.kyrat-story__bear1');
+        var playBear1 = playWhenVisible('.kyrat-story__bear1', bear1Sequence, 40);
 
-        var jump      = imgSequence(128, '.kyrat-story__jump');
-        var playJump  = playWhenVisible('.kyrat-story__jump', jump, 45);
+        var jumpSequence = imgSequence(129, '.kyrat-story__jump');
+        var playJump  = playWhenVisible('.kyrat-story__jump', jumpSequence, 45);
 
-        var bear2     = imgSequence(114, '.kyrat-story__bear2');
-        var playBear2 = playWhenVisible('.kyrat-story__bear2', bear2, 40);
+        var bear2Sequence = imgSequence(115, '.kyrat-story__bear2');
+        var playBear2 = playWhenVisible('.kyrat-story__bear2', bear2Sequence, 40);
 
-        var helicopter     = imgSequence(299, '.kyrat-story__helicopter');
-        var playHelicopter = playWhenVisible('.kyrat-story__helicopter', helicopter, 40);
+        var runningSequence = imgSequence(162, '.kyrat-story__running');
+        var playRunning = playWhenVisible('.kyrat-story__running', runningSequence, 40);
 
-        var bearsplosion     = imgSequence(437, '.kyrat-story__bearsplosion');
-        var playBearsplosion = playWhenVisible('.kyrat-story__bearsplosion', bearsplosion, 40);
+        var helicopterSequence = imgSequence(300, '.kyrat-story__helicopter');
+        var playHelicopter = playWhenVisible('.kyrat-story__helicopter', helicopterSequence, 40);
+
+        var bearsplosionSequence = imgSequence(151, '.kyrat-story__bearsplosion');
+        var playBearsplosion = playWhenVisible('.kyrat-story__bearsplosion', bearsplosionSequence, 40);
 
         window.onscroll = function() {
-          playBear1();
-          playJump();
-          playBear2();
-          playHelicopter();
-          playBearsplosion();
+          setTimeout(function() {
+            playBear1();
+            playJump();
+            playBear2();
+            playHelicopter();
+            playBearsplosion();
+            playRunning();
+          }, 700);
         }
 
       })();
