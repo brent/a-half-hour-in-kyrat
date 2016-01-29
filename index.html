@@ -6,32 +6,28 @@
     <link href="css/reset.css" type="text/css" rel="stylesheet">
 
     <style>
-      a {
-        color: #aaa;
-        text-decoration: underline;
-      }
+      html { font-size: 20px; }
 
       hr {
-        width: 300px;
-        margin: 0 auto 60px;
+        width: 20%;
+        margin: 0 auto 2rem;
         border: none;
         border-top: 1px dotted #777;
       }
 
       .kyrat-story {
         background: #222;
+        padding: 20px;
       }
 
       .kyrat-story__hero {
-        /* background: url('img/kyrat-hero.png') no-repeat; */
-        /* background-size: cover; */
-        padding: 60px 0;
+        padding: 3rem 0 0;
       }
 
       .kyrat-story__hero-title {
         color: #fff;
         font-family: sans-serif;
-        font-size: 100px;
+        font-size: 3rem;
         font-weight: bold;
         margin: 0 auto;
         text-align: center;
@@ -40,55 +36,52 @@
       .kyrat-story__hero .kyrat-story__body-copy {
         color: #777;
         font-family: sans-serif;
-        font-size: 16px;
+        font-size: 0.8rem;
         font-style: italic;
-        margin-top: 20px;
+        margin-top: 1rem;
         text-align: center;
+        text-indent: 0;
       }
 
       .kyrat-story__main {
         color: #999;
-        font-size: 24px;
+        font-size: 1.2rem;
         line-height: 1.4em;
       }
 
       .kyrat-story__body-copy {
+        font-size: 1rem;
         margin: 0 auto;
-        padding-bottom: 60px;
-        text-indent: 2em;
-        width: 700px;
-      }
-
-      .kyrat-story__big-text-container {
+        max-width: 35rem;
+        padding-bottom: 2rem;
+        text-indent: 1em;
+        width: 100%;
       }
 
       .kyrat-story__big-text {
         color: #fff;
         font-family: "Roboto Condensed", sans-serif;
-        font-size: 144px;
+        font-size: 2.6rem;
         font-weight: bold;
-        opacity: 0.8;
+        opacity: 1;
         position: absolute;
         text-align: left;
         text-indent: 0;
         text-transform: uppercase;
-        left: 290px;
-        bottom: 60px;
+        left: 1rem;
+        bottom: 0.5rem;
         line-height: 0.8em;
       }
 
-      .kyrat-story__oh-fuck { }
-
-      .kyrat-story__no-not-again { }
-
-      .kyrat-story__deja-vu { }
-
-      .kyrat-story__surprise { }
+      .kyrat-story__mobile-video-image {
+        position: absolute;
+        width: 100%;
+      }
 
       .kyrat-story__video-sequence-container {
         position: relative;
         max-width: 1280px;
-        margin: 0 auto 60px;
+        margin: 0 auto 2rem;
       }
 
       .kyrat-story__video-sequence {
@@ -100,6 +93,68 @@
         opacity: 0;
       }
 
+      @media screen and (min-width: 600px) {
+        .kyrat-story__hero-title {
+          font-size: 4rem;
+        }
+
+        .kyrat-story__big-text {
+          font-size: 4rem;
+        }
+
+        .kyrat-story__body-copy {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        .kyrat-story__hero-title {
+          font-size: 5rem;
+        }
+
+        .kyrat-story__big-text {
+          font-size: 5rem;
+          bottom: 3rem;
+        }
+
+        .kyrat-story__body-copy {
+          font-size: 1.2rem;
+          /* max-width: 800px: */
+        }
+      }
+
+      @media screen and (min-width: 1025px) {
+        hr {
+          margin-bottom: 3rem;
+        }
+
+        .kyrat-story {
+          padding: 0;
+        }
+
+        .kyrat-story__hero-title {
+          font-size: 5rem;
+        }
+
+        .kyrat-story__big-text {
+          bottom: 3rem;
+          font-size: 7.2rem;
+          left: 23%;
+          opacity: 0.8;
+        }
+
+        .kyrat-story__body-copy {
+          font-size: 1.4rem;
+          line-height: 1.4em;
+          padding-bottom: 3rem;
+          text-indent: 2em;
+        }
+
+        .kyrat-story__video-sequence-container {
+          margin-bottom: 3rem;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -108,8 +163,10 @@
 
       <div class="kyrat-story__hero">
         <h2 class="kyrat-story__hero-title">A Half Hour<br> in Kyrat</h2>
-        <p class="kyrat-story__body-copy">A brief story inspired by <a href="#">Far Cry 4</a></p>
+        <p class="kyrat-story__body-copy">A brief story inspired by Far Cry 4</p>
       </div>
+
+      <hr>
 
       <div class="kyrat-story__main">
 
@@ -117,15 +174,17 @@
         <p class="kyrat-story__body-copy">Just as I arrive at the vantage point, I hear a roar. My body tenses up. I look to my right and for a moment I miss the bear staring down at me from the grassy rise. I double take and spot it. Then it charges.</p>
 
         <div class="kyrat-story__video-sequence-container">
+          <img class="kyrat-story__mobile-video-image" src="img/bear1-0222.png" />
           <video class="kyrat-story__video-sequence kyrat-story__bear1">
             <source src="media/bear1@720p.mp4" type="video/mp4">
           </video>
-            <p class="kyrat-story__big-text kyrat-story__oh-fuck"><span class="big-text-word">Oh.</span> <span class="big-text-word">F**k.</span></p>
+          <p class="kyrat-story__big-text kyrat-story__oh-fuck"><span class="big-text-word">Oh.</span> <span class="big-text-word">F**k.</span></p>
         </div>
 
         <p class="kyrat-story__body-copy">If you've seen The Revenant then I trust you have an appropriately heightened fear of bears and a strong desire to avoid all incoming bear attacks. Instead of spending the next hour as a crippled mess without Tom Hardy (or an Oscar) to chase, I did the only thing that makes sense in Kyrat. I ran the other way and jumped off the cliff.</p>
 
         <div class="kyrat-story__video-sequence-container">
+          <img class="kyrat-story__mobile-video-image" src="img/jump-0308.png" />
           <video class="kyrat-story__video-sequence kyrat-story__jump">
             <source src="media/jump@720p.mp4" type="video/mp4">
           </video>
@@ -136,20 +195,22 @@
         <hr>
 
         <p class="kyrat-story__body-copy">Twenty minutes later, I'm on another cliffside&mdash;silently observing the rickety bell tower reaching into the sky before me. I trekked across the wilderness to get here after dropping off my second try blood diamonds and saving an unrelated hostage from a guard&hellip; only to have a snow leopard kill the the man before I could slay the beast and save him a second time. I tried. Shit happens and Kyrat is a dangerous place.</p>
-        <p class="kyrat-story__body-copy">The tower and its surrounding area look clear. I begin my approach. Before making it halfway, I'm alerted that a Lieutenant of Pagan Min's is nearby. Eliminating him would be good for the rebellion, so I shift my attention. I creep through the foliage and around a tree to survey the scene; he's with three other men. I make short work of the lot with a silenced rifle and move in to loot the bodies and retrieve the officer's orders. As I'm pillaging the dead, I hear a scream, a second person's scream, gunfire, and then a familiar roar.</p>
+        <p class="kyrat-story__body-copy">The tower and its surrounding area look clear. I begin my approach. Before making it halfway, I'm alerted that a lieutenant of Pagan Min's is nearby. Eliminating him would be good for the rebellion, so I shift my attention. I creep through the foliage and around a tree to survey the scene; he's with three other men. I make short work of the lot with a silenced rifle and move in to loot the bodies and retrieve the officer's orders. As I'm pillaging the dead, I hear a scream, a second person's scream, gunfire, and then a familiar roar.</p>
         <p class="kyrat-story__body-copy">Like the well armed madman I am, I run towards the commotion. Just as I'm approaching the road I hear the roar again&mdash;impossibly close. I swivel my head and notice the bear I just ran past returning to all fours.</p>
 
         <div class="kyrat-story__video-sequence-container">
+          <img class="kyrat-story__mobile-video-image" src="img/bear2-0114.png" />
           <video class="kyrat-story__video-sequence kyrat-story__bear2">
             <source src="media/bear2@720p.mp4" type="video/mp4">
           </video>
-          <p class="kyrat-story__big-text kyrat-story__no-not-again"><span class="big-text-word">Oh</span> <span class="big-text-word">no,</span><br /><span class="big-text-word">not</span> <span class="big-text-word">again.</span></p>
+          <p class="kyrat-story__big-text kyrat-story__no-not-again"><span class="big-text-word">Oh</span> <span class="big-text-word">no.</span><br /><span class="big-text-word">not</span> <span class="big-text-word">again.</span></p>
         </div>
 
         <p class="kyrat-story__body-copy">I turn and I run.</p>
         <p class="kyrat-story__body-copy">The road sweeps down and winds back and forth on itself to create three nearly parallel segments. Rather than follow it, I run perpendicular to the roadways and cut through the brown grass between them. I jump down from the high road and land hard close to the middle one.</p>
 
         <div class="kyrat-story__video-sequence-container">
+          <img class="kyrat-story__mobile-video-image" src="img/running-0005.png" />
           <video class="kyrat-story__video-sequence kyrat-story__running">
             <source src="media/running@720p.mp4" type="video/mp4">
           </video>
@@ -161,6 +222,7 @@
         <p class="kyrat-story__body-copy">And then I remember something vital.</p>
 
         <div class="kyrat-story__video-sequence-container">
+          <img class="kyrat-story__mobile-video-image" src="img/helicopter-0078.png" />
           <video class="kyrat-story__video-sequence kyrat-story__helicopter">
             <source src="media/helicopter@720p.mp4" type="video/mp4">
           </video>
@@ -170,13 +232,14 @@
         <p class="kyrat-story__body-copy">Just as I cross the last road, I spin around&mdash;my back facing another decline. I get my first good look at this bear and recognize that only one of us is walking away from this encounter.  I draw the bow back as he closes in and release the only arrow I'll have time to shoot.</p>
 
         <div class="kyrat-story__video-sequence-container">
+          <img class="kyrat-story__mobile-video-image" src="img/bearsplosion-0404.png" />
           <video class="kyrat-story__video-sequence kyrat-story__bearsplosion">
             <source src="media/bearsplosion@720p.mp4" type="video/mp4">
           </video>
           <p class="kyrat-story__big-text kyrat-story__surprise"><span class="big-text-word">Surprise!</span></p>
         </div>
 
-        <p class="kyrat-story__body-copy">The explosion doesn't send the bear backwards. It deflects him. He leaves the ground and flies off the cliff to my left. I watch the whole thing, laughing uncontrollably like the monster I am. How I would explain the situation to my neighbors? The bear lands and slides to a rest near a yak who bolts immediately. Yeah buddy, I would too. I make my way to the carcass and skin the beast&mdash;not because I need to but because I want to.</p>
+        <p class="kyrat-story__body-copy">The explosion doesn't send the bear backwards. It deflects him. He leaves the ground and flies off the cliff to my left. I watch the whole thing, laughing uncontrollably like the monster I am. How would I explain this situation to my neighbors? The bear lands and slides to a rest near a yak who bolts immediately. Yeah buddy, I would too. I make my way to the carcass and skin the beast&mdash;not because I need to but because I want to.</p>
         <p class="kyrat-story__body-copy">You have not killed me today, Kyrat. I have taken the bear you sent for me, knowing in my heart it is the one from earlier.</p>
         <p class="kyrat-story__body-copy">I leave the animal and look up behind me. I can still see the bell tower. Excuse me, I have a propaganda radio station to stop.</p>
 
@@ -229,11 +292,10 @@
             var i = 0;
             (function unhideWord(numWords) {
 
-              console.log(el.nextElementSibling.children[i].classList.contains('big-text-word'));
-              // First revealable word/phrase happens immediately after the video stops
+              // First revealable word/phrase is shown immediately after the video stops
               el.nextElementSibling.children[i].classList.remove('big-text-word-hidden');
 
-              // rest of words/phrases will happen based on setTimeout delay
+              // rest of words/phrases will unhide based on setTimeout delay
               setTimeout(function() {
                 if(--numWords) {
                   i++;
@@ -254,28 +316,49 @@
           }
         }
 
-        // hide all big-text-word spans by default
-        var bigTextSpans = document.querySelectorAll('.big-text-word');
-        for(var i = 0; i < bigTextSpans.length; ++i) {
-          bigTextSpans[i].classList.add('big-text-word-hidden');
+        // disable videos if device is smaller than 1025px
+        // this is a quick and dirty way of turning off the
+        // videos for devices that are mobile and tablet sized
+        // why do this? iOS full screens any <video> which
+        // doesn't play nicely with playWhenVisible or the
+        // over video typography
+        if(window.matchMedia('screen and (min-width: 1025px').matches) {
+
+          // hide mobile images by default
+          var mobileImages = document.querySelectorAll('.kyrat-story__mobile-video-image');
+          for(var i = 0; i < mobileImages.length; ++i) {
+            mobileImages[i].setAttribute('style', 'opacity:0');
+          }
+
+          // hide all big-text-word spans by default
+          var bigTextSpans = document.querySelectorAll('.big-text-word');
+          for(var i = 0; i < bigTextSpans.length; ++i) {
+            bigTextSpans[i].classList.add('big-text-word-hidden');
+          }
+
+          var playBear1 = playWhenVisible('.kyrat-story__bear1');
+          var playJump  = playWhenVisible('.kyrat-story__jump');
+          var playBear2 = playWhenVisible('.kyrat-story__bear2');
+          var playRunning = playWhenVisible('.kyrat-story__running');
+          var playHelicopter = playWhenVisible('.kyrat-story__helicopter');
+          var playBearsplosion = playWhenVisible('.kyrat-story__bearsplosion');
+
+          window.onscroll = function() {
+            setTimeout(function() {
+              playBear1();
+              playJump();
+              playBear2();
+              playHelicopter();
+              playBearsplosion();
+              playRunning();
+            }, 700);
+          }
         }
-
-        var playBear1 = playWhenVisible('.kyrat-story__bear1');
-        var playJump  = playWhenVisible('.kyrat-story__jump');
-        var playBear2 = playWhenVisible('.kyrat-story__bear2');
-        var playRunning = playWhenVisible('.kyrat-story__running');
-        var playHelicopter = playWhenVisible('.kyrat-story__helicopter');
-        var playBearsplosion = playWhenVisible('.kyrat-story__bearsplosion');
-
-        window.onscroll = function() {
-          setTimeout(function() {
-            playBear1();
-            playJump();
-            playBear2();
-            playHelicopter();
-            playBearsplosion();
-            playRunning();
-          }, 700);
+        else {
+          var videos = document.querySelectorAll('.kyrat-story__video-sequence');
+          for(var i = 0; i < videos.length; ++i) {
+            videos[i].setAttribute('style', 'opacity:0');
+          }
         }
 
       })();
