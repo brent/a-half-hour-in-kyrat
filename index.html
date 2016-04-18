@@ -330,12 +330,6 @@
         }
 
         // disable videos if device is smaller than 1025px
-        // this is a quick and dirty way of covering up the
-        // videos for devices that are mobile and tablet sized
-        //
-        // why do this? iOS full screens any <video> by default
-        // which doesn't play nicely with playWhenVisible or the
-        // over video typography
         if(window.matchMedia('screen and (min-width: 1025px').matches) {
 
           // hide all big-text-word spans by default
